@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.4.2 (Python 3.14.7 on win32)" generated="2026-08-19T17:52:50.965835" rpa="false" schemaversion="5">
+<suite id="s1" name="Pegalabs" source="C:\Users\abhinav.n.mishra\PycharmProjects\PythonProject\tests\pegalabs.robot">
+<test id="s1-t1" name="PegaLabs Load and Click" line="6">
+<kw name="Open Browser">
+<msg time="2026-08-19T17:52:51.045640" level="FAIL">No keyword with name 'Open Browser' found.</msg>
+<arg>https://accenture70.pegalabs.io/prweb/app/clmkyc--client-onboarding-for-financial-services-2/Sbv1LjrUINyBjX9Hxau_rqRnGmpOwB94*/!STANDARD?pzPostData=-965631814</arg>
+<arg>chrome</arg>
+<status status="FAIL" start="2026-08-19T17:52:51.045586" elapsed="0.000139">No keyword with name 'Open Browser' found.</status>
+</kw>
+<kw name="Maximize Browser Window">
+<status status="NOT RUN" start="2026-08-19T17:52:51.046123" elapsed="0.000027"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<arg>Using credentials: ${USERNAME}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="NOT RUN" start="2026-08-19T17:52:51.046543" elapsed="0.000039"/>
+</kw>
+<kw name="Wait Until Element Is Visible">
+<arg>xpath=//*[@id="RULE_KEY"]/div/div/div/div/div/div/span/a/i</arg>
+<arg>10s</arg>
+<status status="NOT RUN" start="2026-08-19T17:52:51.046875" elapsed="0.000031"/>
+</kw>
+<kw name="Click Element">
+<arg>xpath=//*[@id="RULE_KEY"]/div/div/div/div/div/div/span/a/i</arg>
+<status status="NOT RUN" start="2026-08-19T17:52:51.047198" elapsed="0.000022"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" start="2026-08-19T17:52:51.047590" elapsed="0.000034"/>
+</kw>
+<doc>Load the target URL using credentials from test data, wait for the element and click it</doc>
+<status status="FAIL" start="2026-08-19T17:52:51.043005" elapsed="0.005054">No keyword with name 'Open Browser' found.</status>
+</test>
+<status status="FAIL" start="2026-08-19T17:52:50.967656" elapsed="0.081353"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat name="Pegalabs" id="s1" pass="0" fail="1" skip="0">Pegalabs</stat>
+</suite>
+</statistics>
+<errors>
+<msg time="2026-08-19T17:52:51.035284" level="ERROR">Error in file 'C:\Users\abhinav.n.mishra\PycharmProjects\PythonProject\tests\pegalabs.robot' on line 2: Importing library 'SeleniumLibrary' failed: ModuleNotFoundError: No module named 'SeleniumLibrary'
+Traceback (most recent call last):
+  None
+PYTHONPATH:
+  C:\Users\abhinav.n.mishra\PycharmProjects\PythonProject
+  C:\Users\abhinav.n.mishra\PycharmProjects\python314.zip
+  C:\Users\abhinav.n.mishra\PycharmProjects\DLLs
+  C:\Users\abhinav.n.mishra\PycharmProjects\Lib
+  C:\Users\abhinav.n.mishra\PycharmProjects
+  C:\Users\abhinav.n.mishra\PycharmProjects\PythonProject\.venv
+  C:\Users\abhinav.n.mishra\PycharmProjects\PythonProject\.venv\Lib\site-packages</msg>
+<msg time="2026-08-19T17:52:51.039729" level="ERROR">Error in file 'C:\Users\abhinav.n.mishra\PycharmProjects\PythonProject\tests\pegalabs.robot' on line 3: Processing variable file 'C:Usersabhinav.n.mishraPycharmProjectsPythonProject	est datacredentials.robot' failed: Importing variable file 'C:Usersabhinav.n.mishraPycharmProjectsPythonProject	est datacredentials.robot' failed: ModuleNotFoundError: No module named 'C:Usersabhinav'
+Traceback (most recent call last):
+  None
+PYTHONPATH:
+  C:\Users\abhinav.n.mishra\PycharmProjects\PythonProject
+  C:\Users\abhinav.n.mishra\PycharmProjects\python314.zip
+  C:\Users\abhinav.n.mishra\PycharmProjects\DLLs
+  C:\Users\abhinav.n.mishra\PycharmProjects\Lib
+  C:\Users\abhinav.n.mishra\PycharmProjects
+  C:\Users\abhinav.n.mishra\PycharmProjects\PythonProject\.venv
+  C:\Users\abhinav.n.mishra\PycharmProjects\PythonProject\.venv\Lib\site-packages</msg>
+</errors>
+</robot>

@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.4.2 (Python 3.14.7 on win32)" generated="2026-08-20T18:09:57.466997" rpa="false" schemaversion="5">
+<suite id="s1" name="Pegalabs" source="C:\Users\abhinav.n.mishra\PycharmProjects\PythonProject\tests\pegalabs.robot">
+<test id="s1-t1" name="PegaLabs Load and Click" line="12">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2026-08-20T18:09:58.330310" level="INFO">Opening browser 'chrome' to base url 'https://accenture70.pegalabs.io/prweb/app/default/beEBp4uRVTogorRwSwWqbOtn9IL2fwdI*/!STANDARD'.</msg>
+<arg>https://accenture70.pegalabs.io/prweb/app/default/beEBp4uRVTogorRwSwWqbOtn9IL2fwdI*/!STANDARD</arg>
+<arg>chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2026-08-20T18:09:58.329744" elapsed="17.506863"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2026-08-20T18:10:15.839428" elapsed="0.096419"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-08-20T18:10:15.938950" level="INFO">Typing text 'abhinav.n.mishra@accenture.com' into text field 'xpath=//*[@id="txtUserID"]'.</msg>
+<arg>${USERNAME_FIELD}</arg>
+<arg>${USERNAME}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-08-20T18:10:15.936830" elapsed="0.315235"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${PASSWORD_FIELD}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-08-20T18:10:16.253103" elapsed="0.195525"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-08-20T18:10:16.450239" level="INFO">Typing text 'rules@234' into text field 'xpath=//*[@id="txtPassword"]'.</msg>
+<arg>${PASSWORD_FIELD}</arg>
+<arg>${PASSWORD}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-08-20T18:10:16.449270" elapsed="0.281302"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2026-08-20T18:10:21.734759" level="INFO">Slept 5 seconds.</msg>
+<arg>5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2026-08-20T18:10:16.731979" elapsed="5.003334"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-08-20T18:10:21.736879" level="INFO">Clicking element 'xpath=//*[@id="sub"]'.</msg>
+<arg>${LOGIN_BUTTON}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-08-20T18:10:21.735932" elapsed="6.242797"/>
+</kw>
+<doc>Login to application using credentials from test_data and verify home screen</doc>
+<tag>TC-001</tag>
+<status status="PASS" start="2026-08-20T18:09:58.327506" elapsed="29.652011"/>
+</test>
+<status status="PASS" start="2026-08-20T18:09:57.498449" elapsed="30.483023"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="1" fail="0" skip="0">TC-001</stat>
+</tag>
+<suite>
+<stat name="Pegalabs" id="s1" pass="1" fail="0" skip="0">Pegalabs</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
