@@ -4,9 +4,9 @@ Resource    ../test_data/credentials.resource
 Resource    ../resources/locators_element.resource
 
 *** Variables ***
-${URL}    https://accenture70.pegalabs.io/prweb/app/default/beEBp4uRVTogorRwSwWqbOtn9IL2fwdI*/!STANDARD
-${USERNAME}    abhinav.n.mishra@accenture.com
-${PASSWORD}    rules@234
+#${URL}    https://accenture70.pegalabs.io/prweb/app/default/beEBp4uRVTogorRwSwWqbOtn9IL2fwdI*/!STANDARD
+#${USERNAME}    abhinav.n.mishra@accenture.com
+#${PASSWORD}    rules@234
 
 *** Test Cases ***
 PegaLabs Load and Click
