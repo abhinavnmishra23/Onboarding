@@ -1,6 +1,39 @@
 *** Settings ***
 Library    SeleniumLibrary
+Resource    ../test_data/credentials.resource
+Resource    ../resources/locators_elements.resource
+Resource    ../resources/keywords_screen.resource
+
 *** Keywords ***
+
+Login to Pega Work Portal
+    [Documentation]    Login to application using credentials from test_data and verify home screen
+    Open Browser    ${PEGA_URL_WORKPORTAL}   chrome
+    Maximize Browser Window
+    Input Text    ${USERNAME_FIELD}    ${USERNAME}
+    Wait Until Element Is Visible    ${PASSWORD_FIELD}
+    Input Text    ${PASSWORD_FIELD}    ${PASSWORD}
+    Sleep    5s
+    Click Element    ${LOGIN_BUTTON}
+    Sleep    10s
+    Wait Until Element Is Visible    ${ACCEPT_PRIVACY_BUTTON}
+    Click Button    ${ACCEPT_PRIVACY_BUTTON}
+    Sleep    5s
+
+#   Start case creation
+Start Case Creation
+    Wait Until Element Is Visible    ${CREATE_BUTTON}
+    Sleep    5s
+    Click Button    ${CREATE_BUTTON}
+
+Start Client Onboarding Case
+#   Enter case details
+    Sleep    2s
+    Wait Until Keyword Succeeds    3x    4s    Wait Until Element Is Visible   ${CASE_TITLE_INPUT}
+    Sleep    5s
+    Click Element    ${CASE_TITLE_INPUT}
+    Sleep    3s
+
 Input Client Onboarding Case Name
     [Arguments]    ${case_name}
     Wait Until Element Is Visible    ${CLIENT_ONBOARDING_CASE_NAME_INPUT}
