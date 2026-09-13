@@ -94,3 +94,9 @@ Client Onboarding Popup Actions
     Sleep    2s
     Capture Page Screenshot
     Submit Client Onboarding Popup
+
+Submit Selected Client Onboarding
+    Wait Until Element Is Visible    ${SUBMIT_ACTION_BUTTON}
+    Click Button    ${SUBMIT_ACTION_BUTTON}
+    Sleep    2s
+    Capture Page Screenshot
