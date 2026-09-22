@@ -13,15 +13,26 @@ Repository layout
 - .venv/           -> optional virtualenv used during development
 
 Key files
-- tests/pegalabs.robot      : main suite that contains TC-001..TC-004
+- tests/pegalabs.robot      : main suite that contains TC-001..TC-002
 - resources/locators_elements.resource : canonical locator variables (use these in tests/keywords)
 - resources/keywords_screen.resource  : higher-level keywords (Login to Pega Work Portal, Start Case Creation, etc.)
 - tests/locator_check_rbw3.robot : example probe for locator verification
+
+Latest framework updates
+- Preferred locator strategy: data-testid -> aria-label -> id -> label[@for] -> stable text-based XPath -> last-resort CSS/XPath
+- For UI element requests, ask forced-choice questions (yes/no or multiple-choice) before generating the final locator to reduce ambiguity.
+- Keep selectors centralized in resources/locators_elements.resource and reuse them through Robot variable names such as ${SHOW_MORE_LESS_BUTTON}.
+- Use stable, reusable Robot variables rather than inline locators in test cases or keywords.
 
 How locators are organized and naming
 - Prefer stable attributes: data-testid, aria-label, element id or label[@for]
 - Variable naming convention: ${OBJECT_DESCRIPTION} (uppercase, underscores); alternate selectors use suffixes like _CSS or _ID
 - Fallback strategy: data-testid -> aria-label -> id -> label[@for] -> text-based xpath -> last-resort long CSS/XPath
+
+Baseline E2E validation reference
+- TC-002 (TC002_E2E_HappyPath_Digital Onboarding) is the baseline end-to-end happy-path case for validation and reference.
+- When validating any new or modified E2E flow, run TC-002 first to confirm the baseline behavior and compare against it.
+- Use TC-002 as the expected success baseline before testing additional scenarios or regression checks.
 
 How to run tests (local)
 1. Create virtualenv and install Robot Framework and SeleniumLibrary (if not present):
@@ -34,10 +45,13 @@ How to run tests (local)
 3. Run full suite:
    robot tests\pegalabs.robot
 
-4. Run single test by name:
-   robot --test "TC004_Client_Onboarding_19Step_Flow" tests\pegalabs.robot
+4. Run the baseline E2E test as reference:
+   robot --test "TC002_E2E_HappyPath_Digital Onboarding" tests\pegalabs.robot
 
-5. Output folder (reports/screenshots): specify --outputdir results
+5. Run single test by name:
+   robot --test "TC002_E2E_HappyPath_Digital Onboarding" tests\pegalabs.robot
+
+6. Output folder (reports/screenshots): specify --outputdir results
    robot --outputdir results tests\pegalabs.robot
 
 Best practices for adding tests

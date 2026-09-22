@@ -95,6 +95,26 @@ Client Onboarding Popup Actions
     Capture Page Screenshot
     Submit Client Onboarding Popup
 
+Client Onboarding Reject Popup Actions
+    [Documentation]    Fills the reject-flow onboarding popup using Branch Assisted and Kenji Nakamura.
+    Wait Until Element Is Visible    ${CLIENT_ONBOARDING_MODAL_HEADER}
+    Input Client Onboarding Case Name    Client Onboarding test
+    Select Client Onboarding Channel    Branch Assisted
+    Choose Initiating User    abhinav.n.mishra
+    Toggle Consent Checkbox
+    Choose Customer    Kenji Nakamura
+    Submit Client Onboarding Popup
+
+Client Onboarding TC004 Reject Popup Actions
+    [Documentation]    Fills the TC004 reject-flow popup using Digital and Takeshi Kobayashi.
+    Wait Until Element Is Visible    ${CLIENT_ONBOARDING_MODAL_HEADER}
+    Input Client Onboarding Case Name    OB Test
+    Select Client Onboarding Channel    Digital
+    Choose Initiating User    abhinav.n.mishra
+    Toggle Consent Checkbox
+    Choose Customer    Takeshi Kobayashi
+    Submit Client Onboarding Popup
+
 Submit Selected Client Onboarding
     Wait Until Element Is Visible    ${SUBMIT_ACTION_BUTTON}
     Click Button    ${SUBMIT_ACTION_BUTTON}

@@ -1,3 +1,3 @@
 ﻿*** Variables ***
 ${USERNAME}    abhinav.n.mishra@accenture.com
-${PASSWORD}    rules@234
+${PASSWORD}    rules@345

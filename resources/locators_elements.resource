@@ -44,6 +44,10 @@ ${NEXT_ACTION_BUTTON}                   xpath=//button[@data-testid=':assignment
 ${SUBMIT_ACTION_BUTTON}                 xpath=//button[@data-testid=':assignment-action-buttons:submit' and @name='submit']
 ${ACCEPT_PRIVACY_BUTTON}                xpath=//button[@data-testid=':privacy-dialog:accept' and contains(normalize-space(.), 'Accept')]
 
+# Reusable generic elements
+${SHOW_MORE_LESS_BUTTON}                xpath=//button[@data-testid=':tasks:show-more-less']
+${SHOW_MORE_LESS_BUTTON_CSS}            css=button[data-testid=':tasks:show-more-less']
+
 # Generic case metadata
 ${BROWSER}                 chrome
 ${URL}                     https://your-pega-url
@@ -110,4 +114,15 @@ ${GO_BUTTON_TEXT}              xpath=//button[normalize-space()="Go"]
 
 # Prefer data-testid or explicit ids when available — already existing variables take precedence
 # End of auto-added stable xpaths
-
+${SWITCH_APPLICATION_BUTTON}    xpath=//button[@data-testid=':menu-button:']
+${REJECT_ACTION_BUTTON}         xpath=//button[@data-testid=':assignment-action-buttons:reject']
+${UTILITY_BILL_ADDRESS_CHECKBOX_LABEL}    xpath=//label[contains(normalize-space(.), 'Utility Bill - Address Confirmation')]//div
+${DOCUMENT_DEFICIENCY_CHECKBOX_LABEL}     xpath=//label[contains(normalize-space(.), 'DOC-DEFICIENCY-7834')]//div
+${ELEMENT_SC_KZLDFD_BVWAN_SC_DWRHG_DUUKTH}    xpath=//div[@class='sc-kZLDfD bvwan sc-dWRHG duUKTh']
+${NATIONAL_ID_GOVERNMENT_ISSUED_CHECKBOX}    xpath=//input[@data-testid=':checkbox:control' and @aria-label='National ID - Government Issued']
+${PASSPORT_PRIMARY_IDENTITY_CHECKBOX_LABEL}    xpath=//label[contains(normalize-space(.), 'Passport - Primary Identity Document')]//div
+${ADDRESS_INCONSISTENCY_CHECKBOX_LABEL}        xpath=//label[contains(normalize-space(.), 'ADDR-INCONSISTENCY-9203')]//div
+${PASSPORT_PRIMARY_IDENTITY_CHECKBOX}           xpath=//input[@data-testid=':checkbox:control' and @type='checkbox' and @aria-label='Passport - Primary Identity Document']
+${OUAKHPRND_CHECKBOX_LABEL}                     xpath=//label[@for='_ouakhprnd' and @data-testid=':checkbox:label']//div
+${PASSPORT_PRIMARY_IDENTITY_CHECKBOX_FIELD}     xpath=//div[@data-testid=':checkbox:' and .//input[@aria-label='Passport - Primary Identity Document']]
+${ADDRESS_INCONSISTENCY_CHECKBOX_FIELD}        xpath=//div[@data-testid=':checkbox:' and .//input[@aria-label='ADDR-INCONSISTENCY-9203']]
